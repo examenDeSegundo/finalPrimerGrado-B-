@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Examen Final - Cultura Digital</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<h1>EXAMEN FINAL DE 1° GRADO GRUPO "B"</h1>
+<h2>Cultura Digital</h2>
+<h3>Ing. José Juan Segundo</h3>
+
+<hr>
+
+<label>Selecciona tu nombre:</label>
+<select id="alumno" onchange="mostrarNombre()">
+    <option value="">-- Selecciona --</option>
+    <option>AMEZCUA BAUTISTA ARIANA GUADALUPE</option>
+    <option>ATZIN JUAREZ BRAYAN PATRICIO</option>
+    <option>BARRIENTOS SIMON ESTRELLA</option>
+    <option>FELIX MENDEZ KARLA ESMERALDA</option>
+    <option>GARCIA RAMIREZ FERNANDO</option>
+    <option>GOMEZ GARCIA KAREN LIZETH</option>
+    <option>GOMEZ VEGA ANALY</option>
+    <option>HERNANDEZ PEREZ SANDRA PAOLA</option>
+    <option>HUERTA JIMENEZ ANGEL MISAEL</option>
+    <option>MENDEZ PEREZ VALENTIN</option>
+    <option>NAVA RAMIREZ JOSUE</option>
+    <option>NUÑEZ OLMEDO ANGEL KARIM</option>
+    <option>PEREZ RAMIREZ CARLOS</option>
+    <option>RAMIREZ RAMIREZ BRAYAN OMAR</option>
+    <option>RAMOS SANTES DULCE ABRIL</option>
+    <option>SAN JUAN GARCIA CRISTAL AIME</option>
+    <option>VAZQUEZ GASPAR MELANY</option>
+    <option>XOCHIHUA DE LA CRUZ VICTOR MANUEL</option>
+</select>
+
+
+<p><strong>Nombre del alumno:</strong> <span id="nombreMostrado">---</span></p>
+
+<form id="examen">
+
+<div class="pregunta">
+<p>1. ¿Qué es un diagrama de flujo en informática?</p>
+<label><input type="radio" name="p1" value="a"> Un programa</label><br>
+<label><input type="radio" name="p1" value="b"> Representación gráfica de un proceso</label><br>
+<label><input type="radio" name="p1" value="c"> Un navegador</label>
+</div>
+
+<div class="pregunta">
+<p>2. ¿Cuál entra en un diagrama de flujo?</p>
+<label><input type="radio" name="p2" value="a"> Símbolos</label><br>
+<label><input type="radio" name="p2" value="b"> Fotos</label><br>
+<label><input type="radio" name="p2" value="c"> Videos</label>
+</div>
+
+<div class="pregunta">
+<p>3. Es un símbolo del diagrama de flujo</p>
+<label><input type="radio" name="p3" value="a"> Círculo</label><br>
+<label><input type="radio" name="p3" value="b"> Rectángulo</label><br>
+<label><input type="radio" name="p3" value="c"> Estrella</label>
+</div>
+
+<div class="pregunta">
+<p>4. Ordenar pasos para resolver un problema es:</p>
+<label><input type="radio" name="p4" value="a"> Algoritmo</label><br>
+<label><input type="radio" name="p4" value="b"> Navegador</label><br>
+<label><input type="radio" name="p4" value="c"> Hardware</label>
+</div>
+
+<div class="pregunta">
+<p>5. ¿Qué es HTML?</p>
+<label><input type="radio" name="p5" value="a"> Lenguaje de marcado</label><br>
+<label><input type="radio" name="p5" value="b"> Sistema operativo</label><br>
+<label><input type="radio" name="p5" value="c"> Programa</label>
+</div>
+
+<div class="pregunta">
+<p>6. ¿Qué es CSS?</p>
+<label><input type="radio" name="p6" value="a"> Lenguaje de estilos</label><br>
+<label><input type="radio" name="p6" value="b"> Navegador</label><br>
+<label><input type="radio" name="p6" value="c"> Base de datos</label>
+</div>
+
+<div class="pregunta">
+<p>7. ¿Qué es JavaScript?</p>
+<label><input type="radio" name="p7" value="a"> Lenguaje de programación</label><br>
+<label><input type="radio" name="p7" value="b"> Editor</label><br>
+<label><input type="radio" name="p7" value="c"> Antivirus</label>
+</div>
+
+<div class="pregunta">
+<p>8. ¿Qué es un navegador?</p>
+<label><input type="radio" name="p8" value="a"> Programa para internet</label><br>
+<label><input type="radio" name="p8" value="b"> Lenguaje</label><br>
+<label><input type="radio" name="p8" value="c"> Servidor</label>
+</div>
+
+<div class="pregunta">
+<p>9. ¿Qué elementos lleva una página web?</p>
+<label><input type="radio" name="p9" value="a"> HTML, CSS y JS</label><br>
+<label><input type="radio" name="p9" value="b"> Word</label><br>
+<label><input type="radio" name="p9" value="c"> Excel</label>
+</div>
+
+<div class="pregunta">
+<p>10. ¿Para qué sirve el &lt;head&gt;?</p>
+<label><input type="radio" name="p10" value="a"> Información de la página</label><br>
+<label><input type="radio" name="p10" value="b"> Mostrar texto</label><br>
+<label><input type="radio" name="p10" value="c"> Imágenes</label>
+</div>
+
+<div class="pregunta">
+<p>11. ¿Qué va dentro del &lt;body&gt;?</p>
+<label><input type="radio" name="p11" value="a"> Contenido visible</label><br>
+<label><input type="radio" name="p11" value="b"> Configuración</label><br>
+<label><input type="radio" name="p11" value="c"> Servidor</label>
+</div>
+
+<button type="button" onclick="calificar()">Calificar examen</button>
+</form>
+
+<h2 id="resultado"></h2>
+
+<!-- FORMULARIO FORM SUBMIT -->
+<form action="https://formsubmit.co/josejuansegundo27@gmail.com" method="POST">
+    <input type="hidden" name="Alumno" id="correoAlumno">
+    <input type="hidden" name="Calificacion" id="correoCalificacion">
+    <input type="hidden" name="_subject" value="Resultado Examen Final Cultura Digital">
+    <input type="hidden" name="_captcha" value="false">
+    <button type="submit">Enviar al profesor</button>
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>

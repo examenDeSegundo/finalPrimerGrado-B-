@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: darkgray;
+}
+
+.pregunta {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.incorrecta {
+    background-color: #ffd6d6;
+    border: 2px solid red;
+}
+
+button {
+    padding: 10px;
+    margin-top: 15px;
+}
